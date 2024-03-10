@@ -3,7 +3,5 @@ name = "deck_of_cards"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-xylem = "0.2.7"
+egui = "0.26.2"
