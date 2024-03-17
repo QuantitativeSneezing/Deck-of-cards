@@ -1,9 +1,13 @@
-use druid::{AppLauncher, WindowDesc};
+// use druid::{AppLauncher, WindowDesc};
 
-Struct Card{
-    suit: String,
-    value: String
-}
-Struct Deck{
-  cards:Vec<Card>
-}
+// struct Card{
+//     suit: String,
+//     value: String
+// }
+// struct Deck{
+//   cards:Vec<Card>
+//   fn shuffle(){
+//     println!("shuffling!")
+//   }
+
+// }

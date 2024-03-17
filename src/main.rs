@@ -1,14 +1,22 @@
-fn main() {
-    println!("Hello, world!");
+// use druid::{AppLauncher, WindowDesc};
+
+struct Card {
+    suit: String,
+    value: String
 }
-// ui.heading("My egui Application");
-// ui.horizontal(|ui| {
-//     ui.label("Your name: ");
-//     ui.text_edit_singleline(&mut name);
-// });
-// ui.add(egui::Slider::new(&mut age, 0..=120).text("age"));
-// if ui.button("Increment").clicked() {
-//     age += 1;
-// }
-// ui.label(format!("Hello '{name}', age {age}"));
-// ui.image(egui::include_image!("ferris.png"));
+struct Deck {
+  cards:Vec<Card>
+}
+impl Deck{
+    fn shuffle(){
+        println!("shuffling!")
+      }
+}
+fn main() {
+    let mut card= Card{
+        suit:"spades".to_string(),
+        value:"ace".to_string()
+    };
+    let mut deck=
+    // let mut deck= Deck();
+}
