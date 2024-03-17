@@ -4,12 +4,17 @@ struct Card {
     suit: String,
     value: String
 }
+impl Card{
+    fn read(&self)->String{
+        return format!("{} of {}", self.value, self.suit)
+    }
+}
 struct Deck {
   cards:Vec<Card>
 }
 impl Deck{
     fn shuffle(){
-        println!("shuffling!")
+        println!("shuffling!");
       }
 }
 fn main() {
@@ -17,6 +22,10 @@ fn main() {
         suit:"spades".to_string(),
         value:"ace".to_string()
     };
-    let mut deck=
-    // let mut deck= Deck();
+    println!("{}",card.read());
+    let mut cards_test = Vec::new();
+    cards_test.push(card);
+    let mut deck= Deck{
+        cards:cards_test
+    };
 }
