@@ -1,5 +1,5 @@
 // use druid::{AppLauncher, WindowDesc};
-
+#[derive(Clone)]
 struct Card {
     suit: String,
     value: String
@@ -13,19 +13,22 @@ struct Deck {
   cards:Vec<Card>
 }
 impl Deck{
-    fn shuffle(){
+    fn shuffle(&self){
         println!("shuffling!");
+        let card= &self.cards[0];
+        println!("{} is on top",card.read());
       }
 }
 fn main() {
-    let mut card= Card{
+    let card= Card{
         suit:"spades".to_string(),
         value:"ace".to_string()
     };
     println!("{}",card.read());
     let mut cards_test = Vec::new();
     cards_test.push(card);
-    let mut deck= Deck{
+    let deck= Deck{
         cards:cards_test
     };
+    deck.shuffle()
 }
