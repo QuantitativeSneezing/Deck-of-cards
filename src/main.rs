@@ -24,7 +24,9 @@ fn main() {
         suit:"spades".to_string(),
         value:"ace".to_string()
     };
-    println!("{}",card.read());
+    let mut suits: Vec<String> = ["spades", "clubs", "hearts", "diamonds"].map(String::from).to_vec();
+    let mut values: Vec<String> = ["ace", "two", "three", "four","five","six",
+    "seven","eight","nine","ten", "Jack", "Queen", "King"].map(String::from).to_vec();
     let mut cards_test = Vec::new();
     cards_test.push(card);
     let deck= Deck{
