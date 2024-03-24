@@ -24,11 +24,17 @@ fn main() {
         suit:"spades".to_string(),
         value:"ace".to_string()
     };
-    let mut suits: Vec<String> = ["spades", "clubs", "hearts", "diamonds"].map(String::from).to_vec();
-    let mut values: Vec<String> = ["ace", "two", "three", "four","five","six",
+    let suits: Vec<String> = ["Spades", "Clubs", "Hearts", "Diamonds"].map(String::from).to_vec();
+    let values: Vec<String> = ["Ace", "two", "three", "four","five","six",
     "seven","eight","nine","ten", "Jack", "Queen", "King"].map(String::from).to_vec();
     let mut cards_test = Vec::new();
-    cards_test.push(card);
+    for suit in suits.iter(){
+        for value in values.iter(){
+            let card= format!("{} of {}", suit, value);
+            // println!("{}",card);
+            cards_test.push(card)
+        }
+    }
     let deck= Deck{
         cards:cards_test
     };
