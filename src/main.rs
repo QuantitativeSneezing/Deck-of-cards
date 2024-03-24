@@ -30,19 +30,20 @@ impl Deck {
         let card = &self.cards[0];
         println!("{} is on top", card.read());
     }
-    // fn repopulate(&self) {
-
-    //     let mut new_cards = Vec::new();
-    //     for suit_name in suits.iter() {
-    //         for value_name in values.iter() {
-    //             let card= Card{suit:suit_name.to_string(), value:value_name.to_string()};
-    //             // println!("{}",card);
-    //             new_cards.push(card);
-    //         }
-    //     }
-
-    //     *self.cards= new_cards;
-    // }
+    fn repopulate(&self) {
+        let mut cards_test = Vec::new();
+    for suit_int in 0..3 {
+        for value_int in 0..12 {
+            let card = Card {
+                suit: suit_int,
+                value: value_int,
+            };
+            // println!("{}",card);
+            cards_test.push(card);
+        }
+    }
+    // *self.cards=cards_test
+    }
 }
 fn main() {
     // let card= Card{
