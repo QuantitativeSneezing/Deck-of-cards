@@ -28,12 +28,12 @@ impl Deck {
     fn shuffle(&self) {
         println!("shuffling!");
         let card = &self.cards[0];
-        println!("{} is on top", card.read());
+        // println!("{} is on top", card.read());
     }
     fn repopulate(&mut self) {
         let mut cards_test = Vec::new();
-    for suit_int in 0..3 {
-        for value_int in 0..12 {
+    for suit_int in 0..4 {
+        for value_int in 0..13 {
             let card = Card {
                 suit: suit_int,
                 value: value_int,
@@ -83,6 +83,6 @@ fn main() {
     println!("{}",deck.cards.len());
     while deck.cards.len()>0{
         // println!("Drawing!");
-        deck.draw(true);
+        deck.draw(false);
     }
 }
