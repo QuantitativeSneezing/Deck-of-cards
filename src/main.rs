@@ -38,16 +38,18 @@ impl Deck {
                 suit: suit_int,
                 value: value_int,
             };
-            // println!("{}",card);
+            println!("{}",card.read());
             cards_test.push(card);
         }
     }
     self.cards= cards_test
     }
-    fn draw(&mut self){
+    fn draw(&mut self, read:bool){
         let card= self.cards.pop().unwrap();
         let value= card.read();
-
+        if read{
+            println!("{}",value)
+        }
     }
 }
 fn main() {
@@ -81,6 +83,6 @@ fn main() {
     println!("{}",deck.cards.len());
     while deck.cards.len()>0{
         // println!("Drawing!");
-        deck.draw();
+        deck.draw(true);
     }
 }
