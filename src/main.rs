@@ -44,6 +44,10 @@ impl Deck {
     }
     self.cards= cards_test
     }
+    fn draw(&mut self){
+        let card= self.cards.pop().unwrap();
+        card.read();
+    }
 }
 fn main() {
     // let card= Card{
@@ -73,4 +77,8 @@ fn main() {
     let mut deck = Deck { cards: cards_test };
     deck.shuffle();
     deck.repopulate();
+
+    while deck.cards.len()>0{
+        deck.draw();
+    }
 }
