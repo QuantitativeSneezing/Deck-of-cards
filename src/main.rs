@@ -30,7 +30,7 @@ impl Deck {
         let card = &self.cards[0];
         println!("{} is on top", card.read());
     }
-    fn repopulate(&self) {
+    fn repopulate(&mut self) {
         let mut cards_test = Vec::new();
     for suit_int in 0..3 {
         for value_int in 0..12 {
@@ -42,7 +42,7 @@ impl Deck {
             cards_test.push(card);
         }
     }
-    // *self.cards=cards_test
+    self.cards= cards_test
     }
 }
 fn main() {
@@ -70,6 +70,7 @@ fn main() {
             cards_test.push(card);
         }
     }
-    let deck = Deck { cards: cards_test };
-    deck.shuffle()
+    let mut deck = Deck { cards: cards_test };
+    deck.shuffle();
+    deck.repopulate();
 }
